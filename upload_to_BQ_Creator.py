@@ -6,6 +6,9 @@
 # First read list of csv files, then print command to upload to bq
 #
 
+#
+# Load library needed to read in all csv files
+#
 import glob
 
 #
@@ -30,6 +33,4 @@ for csv_filename in csv_files:
     new_str = ''.join(new_str.split('\n'))
     new_str = load_str +  "  " + new_str
     print("echo \'Doing  " + csv_filename + "\'" )
-    print(new_str)
-    print(" ")
-
+    print(new_str + "\n")
